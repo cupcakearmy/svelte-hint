@@ -2,7 +2,9 @@
 
 Svelte library for tooltips internally powered by the awesome [Popper.js](https://popper.js.org/) with sensible default values.
 
-Check out the **[demo]()** to see it in action.
+Check out the **[demo](https://svelte-hint.pages.dev/)** to see it in action.
+
+![Screenshot](.github/screen.png)
 
 ## 🌈 Features
 

@@ -3,7 +3,7 @@
   import interact from 'interactjs'
   import { onMount } from 'svelte'
 
-  const directions = ['auto', 'top', 'right', 'bottom', 'left']
+  const directions = ['auto', 'left', 'top', 'bottom', 'right']
   const aligns = ['start', 'center', 'end']
 
   let offset = 4
