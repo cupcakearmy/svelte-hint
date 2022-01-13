@@ -15,7 +15,8 @@
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "publish": "rm -rf ./package && pnpm run check && pnpm run package && pnpm publish ./package"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
