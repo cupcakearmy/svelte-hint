@@ -8,7 +8,7 @@
 
   <p>
     Svelte utility library for Tooltips. Heavy lifting of positioning is done by
-    <a href="https://popper.js.org/">Popper.js</a>.
+    <a href="https://floating-ui.com/">Floating UI</a>.
   </p>
   <p>
     If you are looking for installation and docs please see the

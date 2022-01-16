@@ -1,6 +1,6 @@
 # svelte-hint
 
-Svelte library for tooltips internally powered by the awesome [Popper.js](https://popper.js.org/) with sensible default values.
+Svelte library for tooltips internally powered by the awesome [Fluent UI](https://floating-ui.com/) with sensible default values.
 
 Check out the **[demo](https://svelte-hint.pages.dev/)** to see it in action.
 
@@ -50,12 +50,13 @@ npm install svelte-hint
 
 ### Props
 
-| Prop        | Type                    | Default             | Description                                                                                           |
-| ----------- | ----------------------- | ------------------- | ----------------------------------------------------------------------------------------------------- |
-| `placement` | `Placement`             | `auto`              | For possible values see [popper](https://popper.js.org/docs/v2/constructors/#options).                |
-| `text`      | `string`                | `''`                | Text to be used as the tooltip. If empty the slot will be used.                                       |
-| `boundary`  | `HTMLElement \| string` | `'clippingParents'` | See [popper docs](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary) for possible values. |
-| `offset`    | `number`                | `4`                 | The offset is the distance that the tooltip gets positioned from the trigger.                         |
+| Prop        | Type                          | Default             | Description                                                                                                           |
+| ----------- | ----------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `text`      | `string`                      | `''`                | Text to be used as the tooltip. If empty the slot will be used.                                                       |
+| `placement` | `Placement`                   | `auto`              | See the [Fluent UI docs](https://floating-ui.com/docs/computePosition#placement).                                     |
+| `boundary`  | `HTMLElement \| string`       | `'clippingParents'` | See the [Fluent UI docs](https://floating-ui.com/docs/detectOverflow#boundary).                                       |
+| `offset`    | `Options`                     | `4`                 | See the [Fluent UI docs](https://floating-ui.com/docs/offset#options).                                                |
+| `auto`      | `boolean \| 'start' \| 'end'` | `false`             | Use the [`autoPlacement`](https://floating-ui.com/docs/autoPlacement) middleware. If set `placement` will be ignored. |
 
 ### Slots
 

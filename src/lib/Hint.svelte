@@ -1,47 +1,41 @@
 <script lang="ts" context="module">
-  export type { Placement } from '@popperjs/core'
+  import type { DOMDetectOverflowOptions, Placement } from '@floating-ui/dom'
 </script>
 
 <script lang="ts">
-  import { createPopper, Instance, Placement } from '@popperjs/core'
+  import { computePosition, flip, shift, offset as offsetMiddleware, autoPlacement } from '@floating-ui/dom'
   import { onMount } from 'svelte'
 
-  export let placement: Placement = 'auto'
+  export let placement: Placement | undefined = undefined
   export let text: string | null = null
-  export let boundary: HTMLElement | string = 'clippingParents'
-  export let offset: number = 4
+  export let boundary: DOMDetectOverflowOptions['boundary'] = 'clippingParents'
+  export let offset: Parameters<typeof offsetMiddleware>[0] = 4
+  export let auto: boolean | 'start' | 'end' = false
 
   let trigger: HTMLSpanElement | null = null
   let hint: HTMLSpanElement | null = null
-  let instance: Instance | null = null
   let dataShow = false
   let id = ''
 
-  $: if (hint && trigger) {
-    if (instance) instance.destroy()
-    instance = createPopper(trigger, hint, {
-      placement,
-      modifiers: [
-        {
-          name: 'offset',
-          options: {
-            offset: [0, offset],
-          },
-        },
-        {
-          name: 'flip',
-          options: {
-            boundary,
-          },
-        },
-      ],
+  async function update() {
+    if (!hint || !trigger) return
+
+    const options = {
+      placement: placement as Placement,
+      middleware: auto
+        ? [offsetMiddleware(offset), autoPlacement({ boundary, alignment: typeof auto === 'string' ? auto : null })]
+        : [offsetMiddleware(offset), flip({ boundary }), shift({ boundary, padding: 4 })],
+    }
+    const { x, y } = await computePosition(trigger, hint, options)
+    Object.assign(hint!.style, {
+      left: `${x}px`,
+      top: `${y}px`,
     })
   }
 
-  function show() {
-    console.debug('show', hint)
+  async function show() {
+    await update()
     dataShow = true
-    instance?.update()
   }
 
   function hide() {
@@ -49,14 +43,19 @@
   }
 
   onMount(() => {
+    update()
     id = Math.random().toString(16).slice(2) // Random id for the tooltip
-    const showEvents = ['mouseenter', 'focus']
-    const hideEvents = ['mouseleave', 'blur']
-    showEvents.forEach((event) => trigger?.addEventListener(event, show, false))
-    hideEvents.forEach((event) => trigger?.addEventListener(event, hide, false))
+
+    // Bind events
+    const events: [keyof HTMLElementEventMap, EventListener][] = [
+      ['mouseenter', show],
+      ['focus', show],
+      ['mouseleave', hide],
+      ['blur', hide],
+    ]
+    events.forEach(([event, handler]) => trigger?.addEventListener(event, handler))
     return () => {
-      showEvents.forEach((event) => trigger?.removeEventListener(event, show, false))
-      hideEvents.forEach((event) => trigger?.removeEventListener(event, hide, false))
+      events.forEach(([event, handler]) => trigger?.removeEventListener(event, handler))
     }
   })
 </script>
@@ -74,6 +73,7 @@
 
 <style>
   .svelte-hint-tooltip {
+    position: absolute;
     visibility: hidden;
   }
 

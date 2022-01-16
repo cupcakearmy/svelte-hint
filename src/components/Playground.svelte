@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Hint, { Placement } from '../lib/Hint.svelte'
+  import Hint from '../lib/Hint.svelte'
   import interact from 'interactjs'
   import { onMount } from 'svelte'
 
@@ -11,7 +11,8 @@
   let direction = 'bottom'
   let align = 'center'
 
-  $: placement = `${direction}-${align}`.replace('-center', '') as Placement
+  $: placement = `${direction}-${align}`.replace('-center', '') as any
+  $: auto = (placement.startsWith('auto') && (placement.includes('-') ? placement.split('-')[1] : true)) as any
 
   let knob: HTMLDivElement
 
@@ -74,12 +75,16 @@
 
 <div class="container bg-light">
   <div bind:this={knob}>
-    <Hint {placement} {offset} {text}>
+    <Hint {placement} {offset} {text} {auto}>
       <button class="btn btn-success drag">Hover me!</button>
       <div slot="hint">Test</div>
     </Hint>
   </div>
 </div>
+
+<p>
+  Positioning gets recalculated <b>when hovering</b>, not while moving the button around.
+</p>
 
 <style>
   .container {

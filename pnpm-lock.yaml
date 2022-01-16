@@ -1,7 +1,8 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@popperjs/core': ^2
+  '@floating-ui/core': ^0.3.1
+  '@floating-ui/dom': ^0.1.10
   '@sveltejs/adapter-auto': next
   '@sveltejs/kit': next
   bulma: ^0.9.3
@@ -14,11 +15,12 @@ specifiers:
   typescript: ^4.5.4
 
 dependencies:
-  '@popperjs/core': 2.11.2
+  '@floating-ui/dom': 0.1.10
 
 devDependencies:
+  '@floating-ui/core': 0.3.1
   '@sveltejs/adapter-auto': 1.0.0-next.10
-  '@sveltejs/kit': 1.0.0-next.228_svelte@3.46.0
+  '@sveltejs/kit': 1.0.0-next.229_svelte@3.46.0
   bulma: 0.9.3
   interactjs: 1.10.11
   svelte: 3.46.0
@@ -29,6 +31,15 @@ devDependencies:
   typescript: 4.5.4
 
 packages:
+
+  /@floating-ui/core/0.3.1:
+    resolution: {integrity: sha512-ensKY7Ub59u16qsVIFEo2hwTCqZ/r9oZZFh51ivcLGHfUwTn8l1Xzng8RJUe91H/UP8PeqeBronAGx0qmzwk2g==}
+
+  /@floating-ui/dom/0.1.10:
+    resolution: {integrity: sha512-4kAVoogvQm2N0XE0G6APQJuCNuErjOfPW8Ux7DFxh8+AfugWflwVJ5LDlHOwrwut7z/30NUvdtHzQ3zSip4EzQ==}
+    dependencies:
+      '@floating-ui/core': 0.3.1
+    dev: false
 
   /@iarna/toml/2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
@@ -58,10 +69,6 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: true
-
-  /@popperjs/core/2.11.2:
-    resolution: {integrity: sha512-92FRmppjjqz29VMJ2dn+xdyXZBrMlE42AV6Kq6BwjWV7CNUW1hs2FtxSNLQE+gJhaZ6AAmYuO9y8dshhcBl7vA==}
-    dev: false
 
   /@rollup/pluginutils/4.1.2:
     resolution: {integrity: sha512-ROn4qvkxP9SyPeHaf7uQC/GPFY6L/OWy9+bd9AwcjOAWQwxRscoEyAUD8qCY5o5iL4jqQwoLk2kaTKJPb/HwzQ==}
@@ -99,8 +106,8 @@ packages:
       esbuild: 0.13.15
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.228_svelte@3.46.0:
-    resolution: {integrity: sha512-77e8G7CcmqHhMyAbtjrAWjRDDgFiZArFhujKGql5YM68TWx0cCoipqGdhK0m3EJ/t/NL+T2YuK/9nvtrSNEK6A==}
+  /@sveltejs/kit/1.0.0-next.229_svelte@3.46.0:
+    resolution: {integrity: sha512-i609g5T58Qdgh/qgO1atak70R7woNuJwWp7GtF/YUOZ9csMR9JPUr1tfX9lSh2I4Ez7j+Dc10RLlQ3szVywfXA==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
