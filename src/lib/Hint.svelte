@@ -12,8 +12,8 @@
   export let offset: Parameters<typeof offsetMiddleware>[0] = 4
   export let auto: boolean | 'start' | 'end' = false
 
-  let trigger: HTMLSpanElement | null = null
-  let hint: HTMLSpanElement | null = null
+  let trigger: HTMLDivElement | null = null
+  let hint: HTMLDivElement | null = null
   let dataShow = false
   let id = ''
 
@@ -60,7 +60,7 @@
   })
 </script>
 
-<div bind:this={trigger} aria-describedby={id}>
+<div bind:this={trigger} aria-describedby={id} class="wrapper">
   <slot />
 </div>
 <div bind:this={hint} {id} data-show={dataShow} role="tooltip" class="svelte-hint-tooltip">
@@ -72,6 +72,9 @@
 </div>
 
 <style>
+  .wrapper {
+    display: inline-block;
+  }
   .svelte-hint-tooltip {
     position: absolute;
     visibility: hidden;
