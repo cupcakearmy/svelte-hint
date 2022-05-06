@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  import type { DOMDetectOverflowOptions, Placement } from '@floating-ui/dom'
+  import type { Boundary, Placement } from '@floating-ui/dom'
 </script>
 
 <script lang="ts">
@@ -8,7 +8,7 @@
 
   export let placement: Placement | undefined = undefined
   export let text: string | null = null
-  export let boundary: DOMDetectOverflowOptions['boundary'] = 'clippingParents'
+  export let boundary: Boundary = 'clippingAncestors'
   export let offset: Parameters<typeof offsetMiddleware>[0] = 4
   export let auto: boolean | 'start' | 'end' = false
 

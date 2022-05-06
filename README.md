@@ -52,13 +52,13 @@ npm install svelte-hint
 
 ### Props
 
-| Prop        | Type                          | Default             | Description                                                                                                           |
-| ----------- | ----------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `text`      | `string`                      | `''`                | Text to be used as the tooltip. If empty the slot will be used.                                                       |
-| `placement` | `Placement`                   | `auto`              | See the [Fluent UI docs](https://floating-ui.com/docs/computePosition#placement).                                     |
-| `boundary`  | `HTMLElement \| string`       | `'clippingParents'` | See the [Fluent UI docs](https://floating-ui.com/docs/detectOverflow#boundary).                                       |
-| `offset`    | `Options`                     | `4`                 | See the [Fluent UI docs](https://floating-ui.com/docs/offset#options).                                                |
-| `auto`      | `boolean \| 'start' \| 'end'` | `false`             | Use the [`autoPlacement`](https://floating-ui.com/docs/autoPlacement) middleware. If set `placement` will be ignored. |
+| Prop        | Type                          | Default               | Description                                                                                                           |
+| ----------- | ----------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `text`      | `string`                      | `''`                  | Text to be used as the tooltip. If empty the slot will be used.                                                       |
+| `placement` | `Placement`                   | `auto`                | See the [Fluent UI docs](https://floating-ui.com/docs/computePosition#placement).                                     |
+| `boundary`  | `HTMLElement \| string`       | `'clippingAncestors'` | See the [Fluent UI docs](https://floating-ui.com/docs/detectOverflow#boundary).                                       |
+| `offset`    | `Options`                     | `4`                   | See the [Fluent UI docs](https://floating-ui.com/docs/offset#options).                                                |
+| `auto`      | `boolean \| 'start' \| 'end'` | `false`               | Use the [`autoPlacement`](https://floating-ui.com/docs/autoPlacement) middleware. If set `placement` will be ignored. |
 
 ### Slots
 
