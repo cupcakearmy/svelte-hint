@@ -1,7 +1,5 @@
 # svelte-hint
 
-> ⚠️ This is beta software and still not ready to use
-
 Svelte library for tooltips internally powered by the awesome [Fluent UI](https://floating-ui.com/) with sensible default values.
 
 Check out the **[demo](https://svelte-hint.pages.dev/)** to see it in action.
