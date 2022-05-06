@@ -48,6 +48,17 @@ npm install svelte-hint
 </Hint>
 ```
 
+## 🏗 Setup
+
+Floating UI needs some additional setup. Below are a few examples (which are shamefully copied from the [carbon team](https://github.com/carbon-design-system/carbon-charts/tree/master/packages/svelte#set-up)).
+
+- [SvelteKit](#sveltekit)
+- [Vite](#vite)
+- [Sapper](#sapper)
+- [Rollup](#rollup)
+- [Webpack](#webpack)
+- [Snowpack](#snowpack)
+
 ## 🗂 Docs
 
 ### Props
