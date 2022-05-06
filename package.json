@@ -1,6 +1,6 @@
 {
   "name": "svelte-hint",
-  "version": "1.0.0-rc.6",
+  "version": "1.0.0",
   "description": "Tooltip library for svelte",
   "author": {
     "name": "Niccolo Borgioli",
