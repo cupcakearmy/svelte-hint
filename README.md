@@ -52,12 +52,12 @@ npm install svelte-hint
 
 Floating UI needs some additional setup. Below are a few examples (which are shamefully copied from the [carbon team](https://github.com/carbon-design-system/carbon-charts/tree/master/packages/svelte#set-up)).
 
-- [SvelteKit](#sveltekit)
-- [Vite](#vite)
-- [Sapper](#sapper)
-- [Rollup](#rollup)
-- [Webpack](#webpack)
-- [Snowpack](#snowpack)
+- [SvelteKit](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#sveltekit)
+- [Vite](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#vite)
+- [Sapper](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#sapper)
+- [Rollup](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#rollup)
+- [Webpack](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#webpack)
+- [Snowpack](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#snowpack)
 
 ## 🗂 Docs
 
