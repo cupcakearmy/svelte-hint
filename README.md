@@ -6,9 +6,15 @@ Check out the **[Demo](https://svelte-hint.pages.dev/)** to see it in action.
 
 ![Screenshot](.github/screen.png)
 
+![version badge](https://badgen.net/npm/v/svelte-hint)
+![downloads badge](https://badgen.net/npm/dt/svelte-hint)
+![dependency count](https://badgen.net/bundlephobia/dependency-count/svelte-hint)
+![minzip size badge](https://badgen.net/bundlephobia/minzip/svelte-hint)
+![types badge](https://badgen.net/npm/types/svelte-hint)
+
 ## 🌈 Features
 
-- Automatic positioning & overflow handling on screen edges.
+- Automatic positioning & overflow handling on screen edges (Fluent UI).
 - Fully typed.
 - Sensible default values.
 - Use text or custom html/components as tooltips.
