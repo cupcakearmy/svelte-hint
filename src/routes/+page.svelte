@@ -1,5 +1,4 @@
 <script lang="ts">
-  // import 'bulma/css/bulma.css'
   import Playground from '../components/Playground.svelte'
 </script>
 

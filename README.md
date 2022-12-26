@@ -2,7 +2,7 @@
 
 Svelte library for tooltips internally powered by the awesome [Fluent UI](https://floating-ui.com/) with sensible default values.
 
-Check out the **[demo](https://svelte-hint.pages.dev/)** to see it in action.
+Check out the **[Demo](https://svelte-hint.pages.dev/)** to see it in action.
 
 ![Screenshot](.github/screen.png)
 
@@ -25,7 +25,7 @@ npm install svelte-hint
 
 ```svelte
 <script lang="ts">
-  import { Hint } from 'svelte-hint'
+  import Hint from 'svelte-hint'
 </script>
 
 <Hint text="A tooltip!">
@@ -37,7 +37,7 @@ npm install svelte-hint
 
 ```svelte
 <script lang="ts">
-  import { Hint } from 'svelte-hint'
+  import Hint from 'svelte-hint'
 </script>
 
 <Hint>
@@ -45,17 +45,6 @@ npm install svelte-hint
   <i slot="hint">Some custom html</i>
 </Hint>
 ```
-
-## 🏗 Setup
-
-Floating UI needs some additional setup. Below are a few examples (which are shamefully copied from the [carbon team](https://github.com/carbon-design-system/carbon-charts/tree/master/packages/svelte#set-up)).
-
-- [SvelteKit](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#sveltekit)
-- [Vite](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#vite)
-- [Sapper](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#sapper)
-- [Rollup](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#rollup)
-- [Webpack](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#webpack)
-- [Snowpack](https://github.com/cupcakearmy/svelte-hint/blob/main/SETUP.md#snowpack)
 
 ## 🗂 Docs
 

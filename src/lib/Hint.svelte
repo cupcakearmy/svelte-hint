@@ -1,9 +1,6 @@
-<script lang="ts" context="module">
-  import type { Boundary, Placement } from '@floating-ui/dom'
-</script>
-
 <script lang="ts">
-  import { computePosition, flip, shift, offset as offsetMiddleware, autoPlacement } from '@floating-ui/dom'
+  import type { Boundary, Placement } from '@floating-ui/dom'
+  import { autoPlacement, computePosition, flip, offset as offsetMiddleware, shift } from '@floating-ui/dom'
   import { onMount } from 'svelte'
 
   export let placement: Placement | undefined = undefined
@@ -75,6 +72,7 @@
   .wrapper {
     display: inline-block;
   }
+
   .svelte-hint-tooltip {
     position: absolute;
     visibility: hidden;

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Hint from '../lib/Hint.svelte'
   import interact from 'interactjs'
   import { onMount } from 'svelte'
+  import Hint from '../lib/Hint.svelte'
 
   const directions = ['auto', 'left', 'top', 'bottom', 'right']
   const aligns = ['start', 'center', 'end']
@@ -83,7 +83,7 @@
 </div>
 
 <p>
-  Positioning gets recalculated <b>when hovering</b>, not while moving the button around.
+  Placements gets recalculated <b>when hovering</b>, not while moving the button around.
 </p>
 
 <style>
